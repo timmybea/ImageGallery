@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tCU-cY-Xt6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pinch View Controller-->
+        <scene sceneID="XPh-D7-eGK">
+            <objects>
+                <viewController id="tCU-cY-Xt6" customClass="PinchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mKR-VK-38M"/>
+                        <viewControllerLayoutGuide type="bottom" id="DiQ-mm-gr4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X3R-V3-5Y3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TkE-rM-CLI">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PxJ-HU-WNo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="PxJ-HU-WNo" secondAttribute="trailing" id="EQA-tn-Vne"/>
+                                    <constraint firstItem="PxJ-HU-WNo" firstAttribute="leading" secondItem="TkE-rM-CLI" secondAttribute="leading" id="QHH-Yr-9rj"/>
+                                    <constraint firstItem="PxJ-HU-WNo" firstAttribute="top" secondItem="TkE-rM-CLI" secondAttribute="top" id="TeJ-b4-1az"/>
+                                    <constraint firstAttribute="bottom" secondItem="PxJ-HU-WNo" secondAttribute="bottom" id="y1E-s2-dq9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="tCU-cY-Xt6" id="nBk-6G-nWW"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TkE-rM-CLI" firstAttribute="leading" secondItem="X3R-V3-5Y3" secondAttribute="leading" id="7gP-b1-M4C"/>
+                            <constraint firstItem="TkE-rM-CLI" firstAttribute="top" secondItem="X3R-V3-5Y3" secondAttribute="top" id="DNr-v1-UKl"/>
+                            <constraint firstAttribute="trailing" secondItem="TkE-rM-CLI" secondAttribute="trailing" id="LLz-sH-OK4"/>
+                            <constraint firstItem="DiQ-mm-gr4" firstAttribute="top" secondItem="TkE-rM-CLI" secondAttribute="bottom" id="tKH-kl-RKu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pinchScrollView" destination="TkE-rM-CLI" id="pjt-31-Wgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynC-H8-89g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-738.39999999999998" y="46.326836581709152"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxc-x8-VC4"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mxc-x8-VC4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="adf-Qy-2HI"/>
+                            <constraint firstItem="Mxc-x8-VC4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="gWp-3y-rak"/>
+                            <constraint firstAttribute="trailing" secondItem="Mxc-x8-VC4" secondAttribute="trailing" id="lHd-9a-kCN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mxc-x8-VC4" secondAttribute="bottom" id="mcl-ba-v5V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Mxc-x8-VC4" id="Mgp-LK-vjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="48.125937031484263"/>
+        </scene>
+    </scenes>
+</document>
