@@ -45,6 +45,10 @@
                  [UIImage imageNamed:@"Lighthouse-in-Field"],
                  [UIImage imageNamed:@"Lighthouse-night"],
                  [UIImage imageNamed:@"Lighthouse-zoomed"],
+                 [UIImage imageNamed:@"1-41"],
+                 [UIImage imageNamed:@"02"],
+                 [UIImage imageNamed:@"486899724"],
+                 [UIImage imageNamed:@"shutterstock_14337916"],
                  ];
 }
 
