@@ -45,6 +45,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="PxJ-HU-WNo" id="1Xg-LN-H8E"/>
                         <outlet property="pinchScrollView" destination="TkE-rM-CLI" id="pjt-31-Wgq"/>
                     </connections>
                 </viewController>

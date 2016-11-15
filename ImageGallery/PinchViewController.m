@@ -11,7 +11,7 @@
 @interface PinchViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *pinchScrollView;
-
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -19,8 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
-
+ 
+ //****
+ -(void)setupPanningAndZoomingImage {
+     [self.pinchScrollView addSubview:self.pinchScrollView];
+     
+     self.pinchScrollView.contentSize = self.imageView.bounds.size;
+     
+     self.pinchScrollView.minimumZoomScale = 1.0;
+     self.pinchScrollView.maximumZoomScale = 5.0;
+ }
+ 
+ - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+     return self.imageView;
+ }
 
 @end
