@@ -19,12 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupPanningAndZoomingImage];
 }
  
- //****
  -(void)setupPanningAndZoomingImage {
-     [self.pinchScrollView addSubview:self.pinchScrollView];
      
+     self.imageView.image = self.image;
+     
+     [self.pinchScrollView addSubview:self.imageView];
+     
+     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
      self.pinchScrollView.contentSize = self.imageView.bounds.size;
      
      self.pinchScrollView.minimumZoomScale = 1.0;

@@ -10,4 +10,6 @@
 
 @interface PinchViewController : UIViewController
 
+@property (strong, nonatomic) UIImage *image;
+
 @end
